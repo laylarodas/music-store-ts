@@ -1,11 +1,4 @@
-
-type Product = {
-    id: number;
-    name: string;
-    image: string;
-    description: string;
-    price: number;
-}
+import type { Product } from "../types";
 
 export const db : Product[] = [
     {

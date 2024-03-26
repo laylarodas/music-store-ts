@@ -1,5 +1,4 @@
-
-type Product = {
+export type Product = {
     id: number;
     name: string;
     image: string;
@@ -7,8 +6,14 @@ type Product = {
     price: number;
 }
 
+type productProps = {
+    product: Product;
+    addToCart: (item: Product) => void;
+}
 
-export const Product = ({product, addToCart} : {product: Product, addToCart: (item: Product) => void}) => {
+
+
+export const Product = ({product, addToCart} : productProps) => {
 
     const { name, image, description, price} = product;
 
