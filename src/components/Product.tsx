@@ -1,8 +1,16 @@
-import React from 'react'
 
-export const Product = ({product, addToCart}) => {
+type Product = {
+    id: number;
+    name: string;
+    image: string;
+    description: string;
+    price: number;
+}
 
-    const {id, name, image, description, price} = product;
+
+export const Product = ({product, addToCart} : {product: Product, addToCart: (item: Product) => void}) => {
+
+    const { name, image, description, price} = product;
 
     //console.log(product);
 
