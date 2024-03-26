@@ -1,5 +1,27 @@
+import { CartItem, Product } from "../types";
 
-export const Header = ({ cart, removeFromCart, increaseQuantity, decreaseQuantity, clearCart, isEmpty, cartTotal}) => {
+
+type HeaderProps = {
+    cart: CartItem[];
+    removeFromCart: (id: Product['id']) => void;
+    increaseQuantity: (id: Product['id']) => void;
+    decreaseQuantity: (id: Product['id']) => void;
+    clearCart: () => void;
+    isEmpty: boolean;
+    cartTotal: number;
+}
+
+
+
+export const Header = ({ 
+    cart, 
+    removeFromCart, 
+    increaseQuantity, 
+    decreaseQuantity, 
+    clearCart, 
+    isEmpty, 
+    cartTotal
+} : HeaderProps) => {
 
 
     return (
